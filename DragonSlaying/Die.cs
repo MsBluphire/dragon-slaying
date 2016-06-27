@@ -9,6 +9,8 @@ namespace DragonSlaying
     public class Die
     {
         Random random;
+        Random r = new Random();
+        r.Next(1,20);
         public int NumberOfSides { get; set; }
 
         /// <summary>
@@ -24,17 +26,18 @@ namespace DragonSlaying
         /// <param name="numberOfSides">The number of sides on the Die</param>
         public Die(int numberOfSides)
         {
-            // TODO
-        }
+            NumberOfSides = numberOfSides;
+        }        // TODO
+        
 
         /// <summary>
         /// Rolls the die.
         /// </summary>
         /// <returns>A random number between 1 and <see cref="NumberOfSides"/></returns>
-        public int Roll()
+        public int Roll();
         {
-            // TODO
-            throw new NotImplementedException();
+           return r.Next(); // TODO
+        
         }
     }
 }
